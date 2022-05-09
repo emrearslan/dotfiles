@@ -1,0 +1,21 @@
+### Directory
+link/
+terminal/starship_cache
+kafka/kafka
+kafka/docker-compose.yml
+git/themes.gitconfig
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
