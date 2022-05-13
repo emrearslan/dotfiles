@@ -1,0 +1,1 @@
+export KUBECONFIGPATH=~/.kube
