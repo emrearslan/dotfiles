@@ -46,7 +46,7 @@ init_gitconfig_file() {
 
     declare -r PRIVATE_GIT_FILE_PATH="$HOME/.dotfiles/private/private.gitconfig"
 
-    if [ ! -f $1 ]; then
+    if [ ! -f $PRIVATE_GIT_FILE_PATH ]; then
         create_gitconfig_local
     fi
 
