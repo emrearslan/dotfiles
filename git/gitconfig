@@ -1,0 +1,45 @@
+[user]
+    useConfigOnly = true
+
+[include]
+    path = ~/.gitconfig.local
+    path = ~/.dotfiles/private/private.gitconfig
+    path = ~/.dotfiles/git/themes.gitconfig
+
+[submodule]
+	recurse = true
+
+[alias]
+    l = log --pretty=custom
+
+[init]
+    defaultBranch = master
+
+[pull]
+	rebase = true
+
+[pretty]
+    custom = "%C(#ff9770)%h%C(#ff686b)%d %C(#d1cfe2)%ar %C(#7ec4cf)%s %C(#e8d1c5)(%an)"
+    #                     │            │            │               │              └─ author name
+    #                     │            │            │               └─ message
+    #                     │            │            └─ date (relative)
+    #                     │            └─ decorations (branch, heads or tags)
+    #                     └─ hash (abbreviated)
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta]
+    features = calochortus-lyallii
+    navigate = true
+    side-by-side = true
+    line-numbers = true

@@ -1,10 +1,7 @@
-### Directory
-private/
-link/
-terminal/starship_cache
-kafka/kafka
-kafka/docker-compose.yml
-git/themes.gitconfig
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
 
 ### IntelliJ IDEA ###
 .idea
