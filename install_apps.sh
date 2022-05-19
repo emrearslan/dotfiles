@@ -1,8 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname "${BASH_SOURCE[0]}")" \
-    && . "utils/setup.sh" \
-    && cd ..
+    && . "utils/setup.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -14,7 +13,9 @@ main() {
 
     # find the installers and run them iteratively
 
-    for installer in $(find . -name install.sh); do $installer done
+    for installer in $(find . -name install.sh); do
+        $installer
+    done
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

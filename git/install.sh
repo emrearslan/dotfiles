@@ -42,7 +42,7 @@ configure_gpg() {
 
 }
 
-init_gitconfig_file() {
+init_gitconfig_file() {
 
     declare -r PRIVATE_GIT_FILE_PATH="$HOME/.dotfiles/private/private.gitconfig"
 
@@ -166,6 +166,8 @@ main() {
     configure_gpg
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    printf "\n"
 
     create_gitconfig_local
     create_git_file_symlinks
