@@ -22,6 +22,10 @@ main() {
     ./preferences/finder.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    ./preferences/keyboard.sh
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
 }
 
