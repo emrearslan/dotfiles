@@ -26,6 +26,10 @@ main() {
     ./preferences/keyboard.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    ./preferences/menu_bar.sh
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
 }
 
