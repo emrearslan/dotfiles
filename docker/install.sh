@@ -13,6 +13,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Docker" "docker" "--cask"
+    brew_install "Dive" "dive"
 
 }
 
