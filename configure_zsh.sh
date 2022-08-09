@@ -36,7 +36,7 @@ create_file() {
         touch $1
     else
         # reset file
-        echo -n "" > $1
+        echo > $1
     fi
 
 }
@@ -78,7 +78,7 @@ configure_zshrc_file() {
         touch $ZSHRC_FILE
     else 
         # reset file
-        echo -n "" > $ZSHRC_FILE
+        echo > $ZSHRC_FILE
     fi
 
     # zsh file linked to .zshrc
