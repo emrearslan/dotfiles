@@ -30,10 +30,12 @@ custom_dockapps() {
     printf "%s\n" "${DOCK_APPS}" | \
     while IFS="$(printf '\t')" read app; do
 
-        if test -e "/Applications/${app}.app"; then
-            add_dock "${app}"
+        if test -e "/System/Volumes/Preboot/Cryptexes/App/System/Applications/${app}.app"; then
+            add_dock "${app}" "System/Volumes/Preboot/Cryptexes/App/System"
         elif test -e "/System/Applications/${app}.app"; then
             add_dock "${app}" "System"
+        elif test -e "/Applications/${app}.app"; then
+            add_dock "${app}"
         fi
 
     done
