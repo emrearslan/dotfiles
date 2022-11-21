@@ -127,7 +127,8 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_latest_stable_node
+    # TODO: use node does not work precisely with installing lts
+    # install_latest_stable_node
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
