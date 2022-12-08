@@ -32,6 +32,7 @@ install_chrome() {
     install_chrome_extension "1Password" "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
     install_chrome_extension "Raindrop.io" "ldgfbffkinooeloadekpmfoklnobpien"
     install_chrome_extension "JSON Viewer" "gbmdgpbipfallnflgajpaliibnhdgobh"
+    install_chrome_extension "ModHeader" "idgpnmonknjnojddfkpgkljpfnnfcklj"
     install_chrome_extension "Grammarly" "kbfnbcaeplbcioakkpcpgfkobkghlhen"
 
     killall "Google Chrome" &> /dev/null
