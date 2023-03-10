@@ -26,7 +26,7 @@ main() {
 
     # Install the VSCode plugins
     install_plugin "GitHub Theme" "github.github-vscode-theme"
-    install_plugin "GitHub Copilot" "github.copilot"
+    # install_plugin "GitHub Copilot" "github.copilot"
     install_plugin "IntelliJ IDEA Keybindings" "k--kato.intellij-idea-keybindings"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
