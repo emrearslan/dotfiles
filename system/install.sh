@@ -20,6 +20,7 @@ main() {
     brew_install "Vivid" "vivid"
     brew_install "Rip" "rm-improved"
     brew_install "Ripgrep" "ripgrep"
+    brew_install "Fx.wtf" "fx"
     # brew_install "Navi" "navi" TODO: 
     
 
