@@ -16,7 +16,6 @@ main() {
     brew_install "Goland" "goland" "--cask"
     brew_install "Webstorm" "webstorm" "--cask"
     brew_install "DataGrip" "datagrip" "--cask"
-    brew_install "Fleet" "fleet" "--cask"
     
 }
 
