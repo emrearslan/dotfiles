@@ -28,13 +28,11 @@ main() {
     brew_install "Keeping You Awake" "keepingyouawake" "--cask"
     brew_install "Hidden Bar" "hiddenbar" "--cask"
     brew_install "Raindrop.io" "raindropio" "--cask"
-    # brew_install "Grammarly" "grammarly" "--cask"
-    # brew_install "Grammarly Desktop" "grammarly-desktop" "--cask"
 
-    brew_install "Discord" "discord" "--cask"
-    brew_install "Whatsapp" "whatsapp" "--cask"
-    brew_install "Telegram" "telegram" "--cask"
-    brew_install "VLC" "vlc" "--cask"
+    # brew_install "Discord" "discord" "--cask"
+    # brew_install "Whatsapp" "whatsapp" "--cask"
+    # brew_install "Telegram" "telegram" "--cask"
+    # brew_install "VLC" "vlc" "--cask"
 
     brew_install "Zoom" "zoom" "--cask"
     brew_install "Slack" "slack" "--cask"
