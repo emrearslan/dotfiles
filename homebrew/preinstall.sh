@@ -58,15 +58,6 @@ opt_out_of_analytics() {
 
 }
 
-install_cask_fonts() {
-
-    # TODO: delete this function
-    # Cask fonts was deprecated.
-    # https://github.com/Homebrew/homebrew-linux-fonts/issues/42
-    # brew_tap "homebrew/cask-fonts"
-    
-}
-
 install_cask_upgrade() {
 
     brew_tap "buo/cask-upgrade"
@@ -109,7 +100,6 @@ main() {
     install_homebrew
     opt_out_of_analytics
 
-    install_cask_fonts
     install_cask_upgrade
 
     brew_update
