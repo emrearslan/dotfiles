@@ -16,7 +16,7 @@ main() {
     brew_install "JQ" "jq"
     brew_install "Zoxide" "zoxide"
     brew_install "Bat" "bat"
-    brew_install "Exa" "exa"
+    brew_install "Eza" "eza"
     brew_install "Vivid" "vivid"
     brew_install "Rip" "rm-improved"
     brew_install "Ripgrep" "ripgrep"

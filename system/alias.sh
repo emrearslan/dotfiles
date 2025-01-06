@@ -13,11 +13,11 @@ bat-use-theme() {
     bat --theme=$1
 }
 
-show-all-exa-themes () {
+show-all-eza-themes () {
     for theme in $(vivid themes); do
         echo "Theme: $theme"
         LS_COLORS=$(vivid generate $theme)
-        exa -l
+        eza -l
         echo
     done
 }
