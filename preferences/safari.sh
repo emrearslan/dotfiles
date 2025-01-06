@@ -11,6 +11,9 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    # Note !! 
+    # If you want defaults write to work right for Safari, you need to give Full Disk Access to Terminal/iTerm2
+
     execute "defaults write com.apple.Safari HomePage -string 'about:blank'" \
         "Set home page to 'about:blank'"
 
