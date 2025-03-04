@@ -20,7 +20,7 @@ main() {
     # source: https://x.com/sezeriltekin/status/1526886645324300288
     
     execute "sudo pmset schedule cancelall" \
-        "Set home folder to new winder show folder"
+        "Cancel all scheduled wake requests"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
