@@ -104,7 +104,9 @@ main() {
 
     brew_update
     brew_upgrade
-    brew_cask_upgrade
+
+    # TODO: if all casks are needed to be upgraded, run this command
+    # brew_cask_upgrade 
 
     # opt_out_of_auto_update # TODO
 }

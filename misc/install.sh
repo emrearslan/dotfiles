@@ -6,17 +6,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-#TODO: install app if not installed
-install_app() {
-
-    if [ ! -d "/Applications/$1.app" ]; then
-        brew_install "$1 (install)" "$2" "$3"
-    else
-        # $1 (upgrade)
-        brew upgrade --greedy --dry-run $1
-    fi
-}
-
 main() {
 
     print_in_purple "\n   Miscellaneous\n\n"

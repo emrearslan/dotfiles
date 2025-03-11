@@ -35,16 +35,26 @@ brew_install() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Install the specified formula.
+    # Upgrade the `Formula` if is installed.
 
     # shellcheck disable=SC2086
     if brew list "$FORMULA" &> /dev/null; then
+        if is_argument_cask "$ARGUMENTS"; then
+            brew_cask_upgrade "$FORMULA"
+            return 0
+        fi
+
         print_success "$FORMULA_READABLE_NAME"
-    else
-        execute \
-            "brew install $FORMULA $ARGUMENTS" \
-            "$FORMULA_READABLE_NAME"
+        return 0
     fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Install the specified formula.
+
+    execute \
+        "brew install $FORMULA $ARGUMENTS" \
+        "$FORMULA_READABLE_NAME"
 
 }
 
@@ -88,10 +98,26 @@ brew_upgrade() {
 
 }
 
+is_argument_cask() {
+    [ "$1" = "--cask" ]
+}
+
 brew_cask_upgrade() {
 
-    execute \
-        "brew cu -a -y" \
-        "Homebrew (cask upgrade)"
+    declare -r FORMULA="$1"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if [ -n "$FORMULA" ]; then
+        # Upgrade the specified homebrew cask.
+        execute \
+            "brew cu -a -y $FORMULA" \
+            "$FORMULA_READABLE_NAME (upgrade)"
+    else
+        # Upgrade all the homebrew casks.
+        execute \
+            "brew cu -a -y" \
+            "Homebrew (casks upgrade)"
+    fi
 
 }
