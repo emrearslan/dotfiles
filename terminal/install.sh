@@ -21,6 +21,10 @@ install_iTerm2() {
     execute "defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile_selection -int 2" \
         "iTerm2 Preferences: Set automatically save changes for preferences folder"
 
+    # TODO: add app managemenet permission for smooth upgrade to app with homebrew cask 
+    # execute "todo.. com.googlecode.iterm2" \
+    #    "iTerm2 Preferences: Allow app management permission"
+
     printf "\n"
 
 }
