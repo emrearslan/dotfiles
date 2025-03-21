@@ -16,6 +16,7 @@ main() {
     brew_install "Clipy" "clipy" "--cask"
     brew_install "Keeping You Awake" "keepingyouawake" "--cask"
     brew_install "Hidden Bar" "hiddenbar" "--cask"
+    brew_install "MonitorControl" "monitorcontrol" "--cask"
     brew_install "Raindrop.io" "raindropio" "--cask"
 
     # brew_install "Discord" "discord" "--cask"
