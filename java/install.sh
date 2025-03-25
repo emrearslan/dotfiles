@@ -71,7 +71,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     sdk_install "Java 8 - Zulu" "java" "8.0.442-zulu"
-    sdk_install "Java 11 - Zulu" "java" "11.0.24-zulu"
+    sdk_install "Java 11 - Zulu" "java" "11.0.26-zulu"
     sdk_install "Java 17 - Temurin" "java" "17.0.12-tem"
     sdk_install "Java 21 - Temurin" "java" "21.0.3-tem"
 
