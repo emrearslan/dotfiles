@@ -31,7 +31,8 @@ install_chrome() {
     install_chrome_extension "uBlock Origin" "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     install_chrome_extension "1Password" "aeblfdkhhhdcdjpifhhbdiojplfjncoa"
     install_chrome_extension "Raindrop.io" "ldgfbffkinooeloadekpmfoklnobpien"
-    install_chrome_extension "JSON Viewer" "gbmdgpbipfallnflgajpaliibnhdgobh"
+    # install_chrome_extension "JSON Viewer" "gbmdgpbipfallnflgajpaliibnhdgobh" # no longer working
+    install_chrome_extension "JSON Viewer V3" "cjkilmepecgopoeffjjbhoeenfkponie"
     install_chrome_extension "ModHeader" "idgpnmonknjnojddfkpgkljpfnnfcklj"
     install_chrome_extension "Dark Reader" "eimadpbcbfnmbkopoojfekhnkhdbieeh"
 
