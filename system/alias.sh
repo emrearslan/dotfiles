@@ -22,6 +22,10 @@ show-all-eza-themes () {
     done
 }
 
+get-public-ip() {
+    dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com
+}
+
 # TODO: change alias to function when added function support
 # show_hidden () {
 #    { defaults write com.apple.finder AppleShowAllFiles $1; killall -HUP Finder; }
