@@ -18,6 +18,9 @@
 [pull]
 	rebase = true
 
+[push]
+    autoSetupRemote = true
+
 [pretty]
     custom = "%C(#ff9770)%h%C(#ff686b)%d %C(#d1cfe2)%ar %C(#7ec4cf)%s %C(#e8d1c5)(%an)"
     #                     │            │            │               │              └─ author name
