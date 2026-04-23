@@ -74,6 +74,7 @@ main() {
     sdk_install "Java 11 - Zulu" "java" "11.0.26-zulu"
     sdk_install "Java 17 - Temurin" "java" "17.0.12-tem"
     sdk_install "Java 21 - Temurin" "java" "21.0.3-tem"
+    sdk_install "Java 25 - Temurin" "java" "25.0.2-tem"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

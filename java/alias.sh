@@ -8,6 +8,7 @@ alias jdkdefault12="sdk default java 12.0.2.j9-adpt"
 alias jdkdefault12hs="sdk default java 12.0.2.hs-adpt"
 alias jdkdefault17="sdk default java 17.0.12-tem"
 alias jdkdefault21="sdk default java 21.0.3-tem"
+alias jdkdefault25="sdk default java 25.0.2-tem"
 
 # Maven
 alias mci='mvn clean install'
