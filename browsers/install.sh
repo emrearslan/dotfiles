@@ -35,6 +35,7 @@ install_chrome() {
     install_chrome_extension "JSON Viewer V3" "cjkilmepecgopoeffjjbhoeenfkponie"
     install_chrome_extension "ModHeader" "idgpnmonknjnojddfkpgkljpfnnfcklj"
     install_chrome_extension "Dark Reader" "eimadpbcbfnmbkopoojfekhnkhdbieeh"
+    # install_chrome_extension "Claude" "fcoeoabgfenejglbffodgkkbkcdhcgfn"
 
     killall "Google Chrome" &> /dev/null
 
