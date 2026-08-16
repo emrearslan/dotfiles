@@ -1,2 +1,2 @@
 # Kubectl Autocomplete
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+command -v kubectl &> /dev/null && source <(kubectl completion zsh)

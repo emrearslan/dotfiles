@@ -21,9 +21,7 @@ main() {
     brew_install "Rip" "rm-improved"
     brew_install "Ripgrep" "ripgrep"
     brew_install "Fx.wtf" "fx"
-    # brew_install "Navi" "navi" TODO: 
     
-
 }
 
 main

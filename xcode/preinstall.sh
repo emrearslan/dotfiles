@@ -81,6 +81,16 @@ main() {
     print_in_purple "   Xcode\n\n"
 
     install_xcode_command_line_tools
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if ! is_work_machine; then
+        print_warning "Skipping full Xcode.app (personal machine)"
+        return 0
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_xcode
     set_xcode_developer_directory
     agree_with_xcode_licence

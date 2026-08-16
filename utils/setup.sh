@@ -110,6 +110,46 @@ get_answer() {
     printf "%s" "$REPLY"
 }
 
+ensure_profile() {
+
+    local -r PROFILE_FILE="$HOME/.dotfiles_profile"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if [ ! -f "$PROFILE_FILE" ]; then
+
+        ask_for_confirmation "Is this a work machine?"
+        if answer_is_yes; then
+            printf "work" > "$PROFILE_FILE"
+        else
+            printf "personal" > "$PROFILE_FILE"
+        fi
+
+    fi
+
+}
+
+get_profile() {
+
+    # Note: must be called directly, never via `$(get_profile)` -
+    # ensure_profile's prompt writes to stdout, and command
+    # substitution would silently swallow the question text.
+
+    ensure_profile
+    cat "$HOME/.dotfiles_profile"
+
+}
+
+is_work_machine() {
+    ensure_profile
+    [ "$(cat "$HOME/.dotfiles_profile")" == "work" ]
+}
+
+is_personal_machine() {
+    ensure_profile
+    [ "$(cat "$HOME/.dotfiles_profile")" == "personal" ]
+}
+
 get_os() {
 
     local os=""

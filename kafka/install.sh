@@ -56,6 +56,13 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    if ! is_work_machine; then
+        print_warning "Skipping Kafka (personal machine)"
+        return 0
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     if [ ! -d $KAFKA_FILE ]; then
         install_kafka
     else

@@ -12,10 +12,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # brew_install "Docker" "docker" "--cask"
-    # brew_install "OrbStack" "orbstack" "--cask"
-    brew_install "Podman" "podman"
-    brew_install "Podman Desktop" "podman-desktop"
+    brew_install "Docker" "docker-desktop" "--cask" "--personal"
+    brew_install "OrbStack" "orbstack" "--cask" "--personal"
+
+    brew_install "Podman" "podman" "" "--work"
+    brew_install "Podman Desktop" "podman-desktop" "--cask" "--work"
+
     brew_install "Dive" "dive"
 
 }

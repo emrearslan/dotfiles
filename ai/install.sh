@@ -7,7 +7,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 install_cursor_plugin() {
-    execute "code --install-extension $2" "Cursor IDE Plugin: $1"
+    execute "cursor --install-extension $2" "Cursor IDE Plugin: $1"
 }
 
 install_cursor() {
@@ -27,6 +27,10 @@ install_rtk() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    # rtk writes into ~/.cursor, which only gets created the first time
+    # Cursor.app itself is launched - make sure it exists upfront.
+    mkdir -p "$HOME/.cursor"
+
     execute \
             "rtk init -g --agent cursor" \
             "rtk AI: Install to Cursor"
@@ -39,6 +43,9 @@ install_rtk() {
             "rtk init --agent antigravity" \
             "rtk AI: Install to Antigravity"
 
+    # NOTE: rtk has no "codex" agent (supported: claude, cursor, windsurf,
+    # cline, kilocode, antigravity, kimi, pi, hermes, droid, vibe) - skip.
+
     execute \
             "rtk telemetry disable" \
             "rtk AI: Disabled telemetry"
@@ -47,9 +54,19 @@ install_rtk() {
 
 install_caveman() {
 
+    # `npx` comes from Node, which may not be on PATH yet in this
+    # process (nvm/node are installed by a separate, unordered script) -
+    # pick it up manually if it's already been installed.
+    local -r NVM_INIT_FILE="$HOME/.dotfiles/node/init.sh"
+    [ -s "$NVM_INIT_FILE" ] && . "$NVM_INIT_FILE" && nvm use --silent default &> /dev/null
+
     execute \
             "npx skills add JuliusBrussee/caveman -a cursor" \
             "Caveman: Install to Cursor"
+
+    execute \
+            "npx skills add JuliusBrussee/caveman -a codex" \
+            "Caveman: Install to Codex"
 
     execute \
             "claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman" \
@@ -65,11 +82,15 @@ main() {
 
     brew_install "ChatGPT" "chatgpt" "--cask"
     brew_install "Antigravity" "antigravity" "--cask"
+    brew_install "Antigravity IDE" "antigravity-ide" "--cask"
 
     install_cursor
 
     brew_install "Claude" "claude" "--cask"
     brew_install "Claude Code" "claude-code" "--cask"
+    brew_install "Codex" "codex" "--cask"
+
+    brew_install "CodexBar" "codexbar" "--cask"
 
     install_rtk
     install_caveman

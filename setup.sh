@@ -23,6 +23,14 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    # Ask once, upfront, while stdin is still the real terminal -
+    # every later script just reads the resulting $HOME/.dotfiles_profile
+    # file, so none of them need to prompt interactively themselves.
+
+    ensure_profile
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     ./preinstall_apps.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

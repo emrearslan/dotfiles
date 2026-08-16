@@ -29,6 +29,8 @@ install_homebrew() {
         printf "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &> /dev/null
         #  └─ simulate the ENTER keypress
 
+        ensure_brew_in_path
+
     fi
 
     print_result $? "Homebrew"
@@ -61,7 +63,11 @@ opt_out_of_analytics() {
 install_cask_upgrade() {
 
     brew_tap "buo/cask-upgrade"
-    
+
+    execute \
+        "brew trust --command buo/cask-upgrade/cu" \
+        "Homebrew (trust cask-upgrade command)"
+
 }
 
 opt_out_of_auto_update() {

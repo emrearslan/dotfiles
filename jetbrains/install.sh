@@ -12,10 +12,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "Intellij IDEA" "intellij-idea" "--cask"
-    brew_install "Goland" "goland" "--cask"
-    brew_install "Webstorm" "webstorm" "--cask"
-    brew_install "DataGrip" "datagrip" "--cask"
+    brew_install "Intellij IDEA" "intellij-idea" "--cask" "--work"
+    brew_install "Goland" "goland" "--cask" "--work"
+    brew_install "Webstorm" "webstorm" "--cask" "--work"
+    brew_install "DataGrip" "datagrip" "--cask" "--work"
+
+    brew_install "Intellij IDEA CE" "intellij-idea-ce" "--cask" "--personal"
     
 }
 

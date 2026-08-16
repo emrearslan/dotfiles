@@ -18,15 +18,14 @@ main() {
     brew_install "Hidden Bar" "hiddenbar" "--cask"
     brew_install "MonitorControl" "monitorcontrol" "--cask"
     brew_install "Raindrop.io" "raindropio" "--cask"
-
-    # brew_install "Discord" "discord" "--cask"
-    # brew_install "Whatsapp" "whatsapp" "--cask"
-    # brew_install "Telegram" "telegram" "--cask"
-    # brew_install "VLC" "vlc" "--cask"
-
-    brew_install "Zoom" "zoom" "--cask"
-    brew_install "Slack" "slack" "--cask"
     brew_install "Postman" "postman" "--cask"
+
+    brew_install "Zoom" "zoom" "--cask" "--work"
+    brew_install "Slack" "slack" "--cask" "--work"
+
+    brew_install "Whatsapp" "whatsapp" "--cask" "--personal"
+    # brew_install "Discord" "discord" "--cask" "--personal"
+    # brew_install "Telegram" "telegram" "--cask" "--personal"
 
 }
 

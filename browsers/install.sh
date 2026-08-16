@@ -54,6 +54,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Firefox" "firefox" "--cask"
+    brew_install "Opera" "opera" "--cask" "--personal"
 
 }
 

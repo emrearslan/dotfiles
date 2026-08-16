@@ -5,12 +5,51 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# `brew`'s installer doesn't update PATH for the current process/script,
+# so right after a fresh install (or in any script run before the shell
+# has been restarted) `brew` isn't found yet. Pick it up manually from
+# its known install locations.
+
+ensure_brew_in_path() {
+
+    if cmd_exists "brew"; then
+        return 0
+    fi
+
+    if [ -x "/opt/homebrew/bin/brew" ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [ -x "/usr/local/bin/brew" ]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
+
+}
+
+ensure_brew_in_path
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 brew_install() {
 
     declare -r ARGUMENTS="$3"
     declare -r FORMULA="$2"
     declare -r FORMULA_READABLE_NAME="$1"
-    declare -r TAP_VALUE="$4"
+    declare -r PROFILE="$4"
+    declare -r TAP_VALUE="$5"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Skip formulas restricted to a machine profile
+    # (--work / --personal) that doesn't match this machine.
+
+    if [ "$PROFILE" == "--work" ] && ! is_work_machine; then
+        print_warning "$FORMULA_READABLE_NAME (skipped, work only)"
+        return 0
+    fi
+
+    if [ "$PROFILE" == "--personal" ] && ! is_personal_machine; then
+        print_warning "$FORMULA_READABLE_NAME (skipped, personal only)"
+        return 0
+    fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -52,8 +91,11 @@ brew_install() {
 
     # Install the specified formula.
 
+    # TODO: --force is temporary, remove after this full setup.sh run -
+    # it's here so casks that are already installed manually (not via
+    # brew) don't error out and stop the run.
     execute \
-        "brew install $FORMULA $ARGUMENTS" \
+        "brew install $FORMULA $ARGUMENTS --force" \
         "$FORMULA_READABLE_NAME"
 
 }
