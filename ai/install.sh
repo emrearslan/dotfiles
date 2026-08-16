@@ -39,12 +39,12 @@ install_rtk() {
             "rtk init -g" \
             "rtk AI: Install to Claude"
 
-    execute \
-            "rtk init --agent antigravity" \
-            "rtk AI: Install to Antigravity"
-
     # NOTE: rtk has no "codex" agent (supported: claude, cursor, windsurf,
     # cline, kilocode, antigravity, kimi, pi, hermes, droid, vibe) - skip.
+    
+    # NOTE: antigravity is project-scoped only (no -g) - running it here
+    # would dump .agents/ into this repo. Run "rtk init --agent antigravity"
+    # inside each project instead.
 
     execute \
             "rtk telemetry disable" \
