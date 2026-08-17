@@ -39,9 +39,15 @@ install_rtk() {
             "rtk init -g" \
             "rtk AI: Install to Claude"
 
+    if is_work_machine; then
+        execute \
+                "rtk init -g --opencode" \
+                "rtk AI: Install to OpenCode"
+    fi
+
     # NOTE: rtk has no "codex" agent (supported: claude, cursor, windsurf,
     # cline, kilocode, antigravity, kimi, pi, hermes, droid, vibe) - skip.
-    
+
     # NOTE: antigravity is project-scoped only (no -g) - running it here
     # would dump .agents/ into this repo. Run "rtk init --agent antigravity"
     # inside each project instead.
@@ -65,12 +71,20 @@ install_caveman() {
             "Caveman: Install to Cursor"
 
     execute \
-            "npx skills add JuliusBrussee/caveman -a codex" \
-            "Caveman: Install to Codex"
-
-    execute \
             "claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman" \
             "Caveman: Install to Claude"
+
+    if is_personal_machine; then
+        execute \
+                "npx skills add JuliusBrussee/caveman -a codex" \
+                "Caveman: Install to Codex"
+    fi
+
+    if is_work_machine; then
+        execute \
+                "npx skills add JuliusBrussee/caveman -a opencode" \
+                "Caveman: Install to OpenCode"
+    fi
 
 }
 
@@ -80,17 +94,19 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "ChatGPT" "chatgpt" "--cask"
-    brew_install "Antigravity" "antigravity" "--cask"
-    brew_install "Antigravity IDE" "antigravity-ide" "--cask"
+    brew_install "ChatGPT" "chatgpt" "--cask" "--personal"
+    brew_install "Antigravity" "antigravity" "--cask" "--personal"
+    brew_install "Antigravity IDE" "antigravity-ide" "--cask" "--personal"
 
     install_cursor
 
-    brew_install "Claude" "claude" "--cask"
+    brew_install "Claude" "claude" "--cask" "--personal"
     brew_install "Claude Code" "claude-code" "--cask"
-    brew_install "Codex" "codex" "--cask"
+    brew_install "Codex" "codex" "--cask" "--personal"
 
-    brew_install "CodexBar" "codexbar" "--cask"
+    brew_install "CodexBar" "codexbar" "--cask" "--personal"
+
+    brew_install "OpenCode" "opencode" "" "--work"
 
     install_rtk
     install_caveman
