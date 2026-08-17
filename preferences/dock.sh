@@ -78,6 +78,9 @@ main() {
     execute "defaults write com.apple.dock show-recents -bool false" \
         "Do not show recent applications in Dock"
 
+    execute "defaults write com.apple.dock mru-spaces -bool false" \
+        "Disable automatically rearranging Spaces based on most recent use"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     custom_dockapps
