@@ -81,6 +81,9 @@ main() {
     execute "defaults write com.apple.dock mru-spaces -bool false" \
         "Disable automatically rearranging Spaces based on most recent use"
 
+    execute "defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true" \
+        "Do not close windows when quitting an application"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     custom_dockapps
