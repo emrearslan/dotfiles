@@ -107,6 +107,7 @@ main() {
     brew_install "CodexBar" "codexbar" "--cask" "--personal"
 
     brew_install "OpenCode" "opencode" "" "--work"
+    brew_install "Pi Coding Agent" "pi-coding-agent" "" "--work"
 
     install_rtk
     install_caveman
