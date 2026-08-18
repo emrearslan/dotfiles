@@ -43,6 +43,10 @@ install_rtk() {
         execute \
                 "rtk init -g --opencode" \
                 "rtk AI: Install to OpenCode"
+
+        execute \
+                "rtk init -g --agent pi" \
+                "rtk AI: Install to Pi Coding Agent"
     fi
 
     # NOTE: rtk has no "codex" agent (supported: claude, cursor, windsurf,
@@ -84,6 +88,10 @@ install_caveman() {
         execute \
                 "npx skills add JuliusBrussee/caveman -a opencode" \
                 "Caveman: Install to OpenCode"
+
+        execute \
+                "npx skills add JuliusBrussee/caveman -a pi" \
+                "Caveman: Install to Pi Coding Agent"
     fi
 
 }
