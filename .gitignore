@@ -6,6 +6,10 @@ kafka/kafka
 kafka/docker-compose.yml
 git/themes.gitconfig
 
+### skills tool artifacts ###
+utils/.agents/
+utils/skills-lock.json
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
