@@ -117,6 +117,8 @@ main() {
     brew_install "OpenCode" "opencode" "" "--work"
     brew_install "Pi Coding Agent" "pi-coding-agent" "" "--work"
 
+    brew_install "t3 Code" "t3-code" "--cask" "--personal"
+
     install_rtk
     install_caveman
 }
