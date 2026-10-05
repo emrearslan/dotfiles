@@ -64,7 +64,8 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     if [ ! -d $KAFKA_FILE ]; then
-        install_kafka
+        print_success "SKIP: Kafka already installed"
+        # install_kafka
     else
         print_success "Kafka already installed"
     fi
