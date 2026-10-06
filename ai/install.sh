@@ -71,7 +71,7 @@ install_caveman() {
     [ -s "$NVM_INIT_FILE" ] && . "$NVM_INIT_FILE" && nvm use --silent default &> /dev/null
 
     execute \
-            "npx skills add JuliusBrussee/caveman -a cursor" \
+            "npx skills add JuliusBrussee/caveman -a cursor -g -y" \
             "Caveman: Install to Cursor"
 
     execute \
@@ -80,17 +80,17 @@ install_caveman() {
 
     if is_personal_machine; then
         execute \
-                "npx skills add JuliusBrussee/caveman -a codex" \
+                "npx skills add JuliusBrussee/caveman -a codex -g -y" \
                 "Caveman: Install to Codex"
     fi
 
     if is_work_machine; then
         execute \
-                "npx skills add JuliusBrussee/caveman -a opencode" \
+                "npx skills add JuliusBrussee/caveman -a opencode -g -y" \
                 "Caveman: Install to OpenCode"
 
         execute \
-                "npx skills add JuliusBrussee/caveman -a pi" \
+                "npx skills add JuliusBrussee/caveman -a pi -g -y" \
                 "Caveman: Install to Pi Coding Agent"
     fi
 
