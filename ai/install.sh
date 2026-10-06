@@ -41,10 +41,6 @@ install_rtk() {
 
     if is_work_machine; then
         execute \
-                "rtk init -g --opencode" \
-                "rtk AI: Install to OpenCode"
-
-        execute \
                 "rtk init -g --agent pi" \
                 "rtk AI: Install to Pi Coding Agent"
     fi
@@ -86,10 +82,6 @@ install_caveman() {
 
     if is_work_machine; then
         execute \
-                "npx skills add JuliusBrussee/caveman -a opencode -g -y" \
-                "Caveman: Install to OpenCode"
-
-        execute \
                 "npx skills add JuliusBrussee/caveman -a pi -g -y" \
                 "Caveman: Install to Pi Coding Agent"
     fi
@@ -114,7 +106,6 @@ main() {
 
     brew_install "CodexBar" "codexbar" "--cask" "--personal"
 
-    brew_install "OpenCode" "opencode" "" "--work"
     brew_install "Pi Coding Agent" "pi-coding-agent" "" "--work"
 
     brew_install "t3 Code" "t3-code" "--cask" "--personal"
