@@ -17,7 +17,7 @@ main() {
     brew_install "Keeping You Awake" "keepingyouawake" "--cask"
     brew_install "Hidden Bar" "hiddenbar" "--cask"
     brew_install "MonitorControl" "monitorcontrol" "--cask"
-    brew_install "Raindrop.io" "raindropio" "--cask"
+    # brew_install "Raindrop.io" "raindropio" "--cask"
     brew_install "Postman" "postman" "--cask"
 
     brew_install "Zoom" "zoom" "--cask" "--work"
