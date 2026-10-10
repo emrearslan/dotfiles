@@ -1,0 +1,11 @@
+onboarding = false
+
+[theme]
+name = "one-dark"
+auto_switch = false
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "herdr"

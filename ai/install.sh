@@ -21,6 +21,17 @@ install_cursor() {
 
 }
 
+install_herdr() {
+
+    brew_install "Herdr" "herdr"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    execute "mkdir -p '$HOME/.config/herdr' && ln -sf '$HOME/.dotfiles/ai/herdr/config.toml' '$HOME/.config/herdr/config.toml'" \
+        "Herdr: Link config"
+
+}
+
 install_rtk() {
 
     brew_install "rtk AI" "rtk"
@@ -108,6 +119,8 @@ main() {
     brew_install "Pi Coding Agent" "pi-coding-agent" "" "--work"
 
     brew_install "t3 Code" "t3-code" "--cask" "--personal"
+
+    install_herdr
 
     install_rtk
     install_caveman
