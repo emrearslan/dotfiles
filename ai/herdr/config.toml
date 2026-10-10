@@ -8,4 +8,4 @@ auto_switch = false
 enabled = false
 
 [ui.toast]
-delivery = "herdr"
+delivery = "terminal"
