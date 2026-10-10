@@ -31,6 +31,21 @@ install_iTerm2() {
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+install_ghostty() {
+
+    brew_install "Ghostty" "ghostty" "--cask"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    execute "mkdir -p '$HOME/.config/ghostty' && ln -sf '$HOME/.dotfiles/terminal/ghostty/config.ghostty' '$HOME/.config/ghostty/config.ghostty'" \
+        "Ghostty: Link config"
+
+    printf "\n"
+
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 main() {
 
     print_in_purple "\n   Terminal\n\n"
@@ -38,6 +53,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_iTerm2
+    install_ghostty
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     

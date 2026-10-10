@@ -1,0 +1,37 @@
+# Ported from iTerm2 profile (terminal/iterm2/com.googlecode.iterm2.plist)
+
+# Font
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13
+font-feature = -calt
+font-thicken = true
+
+# Window
+window-width = 130
+window-height = 40
+background-opacity = 0.7
+background-blur = 20
+window-inherit-working-directory = true
+confirm-close-surface = false
+
+# Terminal
+bold-color = ffffff
+term = xterm-256color
+macos-option-as-alt = false
+cursor-style-blink = false
+clipboard-read = allow
+clipboard-write = allow
+right-click-action = context-menu
+
+# Theme
+theme = iTerm2 Dark Background
+
+# Keys (iTerm2 Keyboard Map)
+keybind = cmd+backspace=text:\x15
+keybind = alt+backspace=text:\x1b\x7f
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+keybind = cmd+left=text:\x01
+keybind = cmd+right=text:\x05
+keybind = delete=text:\x04
+keybind = alt+delete=esc:d
