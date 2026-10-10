@@ -74,11 +74,9 @@ install_caveman() {
             "claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman" \
             "Caveman: Install to Claude"
 
-    if is_personal_machine; then
-        execute \
-                "npx skills add JuliusBrussee/caveman -a codex -g -y" \
-                "Caveman: Install to Codex"
-    fi
+    execute \
+            "npx skills add JuliusBrussee/caveman -a codex -g -y" \
+            "Caveman: Install to Codex"
 
     if is_work_machine; then
         execute \
@@ -94,7 +92,9 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "ChatGPT" "chatgpt" "--cask" "--personal"
+    brew_install "ChatGPT" "chatgpt" "--cask"
+    brew_install "Codex" "codex" "--cask"
+    
     brew_install "Antigravity" "antigravity" "--cask" "--personal"
     brew_install "Antigravity IDE" "antigravity-ide" "--cask" "--personal"
 
@@ -102,7 +102,6 @@ main() {
 
     brew_install "Claude" "claude" "--cask" "--personal"
     brew_install "Claude Code" "claude-code" "--cask"
-    brew_install "Codex" "codex" "--cask" "--personal"
 
     brew_install "CodexBar" "codexbar" "--cask" "--personal"
 
