@@ -106,8 +106,8 @@ main() {
     brew_install "ChatGPT" "chatgpt" "--cask"
     brew_install "Codex" "codex" "--cask"
     
-    brew_install "Antigravity" "antigravity" "--cask" "--personal"
-    brew_install "Antigravity IDE" "antigravity-ide" "--cask" "--personal"
+    # brew_install "Antigravity" "antigravity" "--cask" "--personal"
+    # brew_install "Antigravity IDE" "antigravity-ide" "--cask" "--personal"
 
     install_cursor
 
@@ -118,7 +118,7 @@ main() {
 
     brew_install "Pi Coding Agent" "pi-coding-agent" "" "--work"
 
-    brew_install "t3 Code" "t3-code" "--cask" "--personal"
+    # brew_install "t3 Code" "t3-code" "--cask" "--personal"
 
     install_herdr
 
